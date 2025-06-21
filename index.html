@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platos Típicos del Valle</title>
+    <style>
+        body {
+            background-color: lightgray;
+            font-family: 'Arial', sans-serif;
+            color: rgb(2, 1, 24);
+            text-align: center;
+        }
+        .title-container {
+            margin-bottom: 20px;
+            background-color: #0b0c50; /* Fondo del cuadro */
+            color: white; /* Color del texto */
+            padding: 1px; /* Espaciado interno */
+            border-radius: 19px; /* Bordes redondeados */
+            display: inline-block; /* Ajusta el tamaño al contenido */
+            font-family: 'Georgia', serif; /* Fuente llamativa para el título */
+            font-size: 18px; /* Tamaño más grande */
+            font-weight: bold; /* Negrita */
+        }
+        img {
+            max-width: 450px; /* Aumenta el tamaño máximo de la imagen */
+            height: auto;
+            margin-top: 20px;
+            border: 8px solid #0d0742; /* Borde más grueso alrededor de la imagen */
+            border-radius: 15px; /* Bordes redondeados */
+            display: block; /* Hace que la imagen sea un bloque */
+            margin-left: auto; /* Centra horizontalmente */
+            margin-right: auto; /* Centra horizontalmente */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para destacar más */
+        }
+        #descripcion {
+            margin-top: 10px;
+            font-size: 18px;
+            font-family: 'Verdana', sans-serif; /* Fuente diferente para los textos descriptivos */
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #292a63; /* Color de fondo */
+            color: white; /* Color del texto */
+            border: none; /* Sin borde */
+            border-radius: 10px; /* Bordes redondeados */
+            font-family: 'Arial', sans-serif; /* Fuente */
+            transition: background-color 0.3s ease; /* Efecto de transición */
+        }
+        button:hover {
+            background-color: #1f1f4d; /* Color más oscuro al pasar el mouse */
+        }
+    </style>
+</head>
+<body>
+    <div class="title-container">
+        <h1>PLATOS TÍPICOS DEL VALLE</h1>
+    </div>
+    <img id="foto-inicio" src="foto-inicio.jpg" alt="Imagen de inicio">
+    
+    <!-- Contenedor para el texto descriptivo -->
+    <div id="descripcion"></div>
+
+    <!-- Botones para cambiar la imagen y el texto -->
+    <button onclick="clic1()">Aborrajado</button>
+    <button onclick="clic2()">Pandebono</button>
+    <button onclick="clic3()">Marranitas</button>
+
+    <script>
+        function clic1() {
+            var img = document.getElementById("foto-inicio");
+            img.src = "aborrajado.jpg"; // Cambia la imagen al hacer clic en el botón Aborrajado
+            
+            var descripcion = document.getElementById("descripcion");
+            descripcion.innerHTML = "<span style='font-family: Verdana, sans-serif;'>El aborrajado es un plato típico del Valle del Cauca, hecho con plátano maduro, queso y a veces bocadillo, frito en una mezcla de harina y huevo.</span>";
+        }
+       
+        function clic2() {
+            var img = document.getElementById("foto-inicio");
+            img.src = "pandebono.jpg"; // Cambia la imagen al hacer clic en el botón Pandebono
+            
+            var descripcion = document.getElementById("descripcion");
+            descripcion.innerHTML = "<span style='font-family: Verdana, sans-serif;'>El pandebono es un panecillo tradicional del Valle del Cauca, elaborado con harina de maíz, almidón de yuca, queso y huevo.</span>";
+        }
+        
+        function clic3() {
+            var img = document.getElementById("foto-inicio");
+            img.src = "marranitas.jpg"; // Cambia la imagen al hacer clic en el botón Marranitas
+            
+            var descripcion = document.getElementById("descripcion");
+            descripcion.innerHTML = "<span style='font-family: Verdana, sans-serif;'>Las marranitas son bolas de plátano verde rellenas de chicharrón, típicas de la región del Valle del Cauca.</span>";
+        }
+    </script>
+</body>
+</html>
